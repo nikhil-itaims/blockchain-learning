@@ -10,9 +10,15 @@ contract StructDemo {
     Student public student_1;
     
     constructor(uint _roll_no, string memory _name){
+        // To add value while initializing the object
         student_1.roll_no = _roll_no;
         student_1.name = _name;
     }
+
+    // constructor(){
+    //     student_1.roll_no = 10;
+    //     student_1.name = "Nikhil Sutariya";
+    // }
 
     function changeValue(uint _roll_no, string memory _name) public {
         Student memory new_student = Student({
